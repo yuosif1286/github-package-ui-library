@@ -8,7 +8,7 @@
   "exports": {
     ".": {
       "import": "./dist/halal-ui-library.es.js",
-      "require": "./dist/halal-ui-library.cjs.js"
+      "require": "./dist/halal-ui-library.cjs.js",
        "types": "./dist/types/index.d.ts"
     }
   },
