@@ -7,9 +7,9 @@
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/halal-ui-library.es.js",
-      "require": "./dist/halal-ui-library.cjs.js",
-       "types": "./dist/types/index.d.ts"
+      "require": "./dist/halal-ui-library.cjs.js"
     }
   },
   "publishConfig": {
@@ -24,7 +24,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "build": "vite build && vue-tsc --declaration --declarationDir dist/types --emitDeclarationOnly",
     "preserve": "vite build",
     "serve": "vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit",
