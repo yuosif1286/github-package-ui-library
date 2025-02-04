@@ -34,4 +34,4 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.HALALTOKEN }}
-      - run: git push origin main --follow-tags 
+      - run: git push origin main --follow-tags
