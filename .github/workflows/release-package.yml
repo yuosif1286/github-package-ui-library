@@ -30,6 +30,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm run build
+      - run: npm version patch
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.HALALTOKEN }}
+      - run: git push origin main --follow-tags 
