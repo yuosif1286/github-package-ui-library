@@ -19,7 +19,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "GithubPackagesUiLibrary",
-      fileName: (format) => `github-packages-ui-library.${format}.js`,
+      fileName: (format) => `halal-ui-library.${format}.js`,
     },
 
     rollupOptions: {
