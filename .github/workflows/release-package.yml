@@ -20,8 +20,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
+      contents: write  # ✅ Allows GitHub Actions to push commits
       packages: write
-      contents: read
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -38,4 +38,8 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.HALALTOKEN }}
-      - run: git push origin main --follow-tags
+      - name: Push Changes
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/yuosif1286/github-package-ui-library.git
+          git push origin main --follow-tags
+    
