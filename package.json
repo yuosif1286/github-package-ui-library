@@ -1,0 +1,45 @@
+{
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/halal-ui-library.umd.js",
+  "module": "./dist/halal-ui-library.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/halal-ui-library.es.js",
+      "require": "./dist/halal-ui-library.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@yuosif1286"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuosif1286/halal-ui-library"
+  },
+  "name": "@yuosif1286/halal-ui-library",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "preserve": "vite build",
+    "serve": "vite preview --port 5050",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vue-tsc": "^2.2.0"
+  }
+}
