@@ -2,15 +2,16 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/halal-ui-library.umd.js",
+  "main": "./dist/halal-ui-library.cjs.js",
   "module": "./dist/halal-ui-library.es.js",
+  "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/halal-ui-library.es.js",
-      "require": "./dist/halal-ui-library.umd.js"
+      "require": "./dist/halal-ui-library.cjs.js"
+       "types": "./dist/types/index.d.ts"
     }
   },
-  "types": "./dist/types/index.d.ts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@yuosif1286"
   },
