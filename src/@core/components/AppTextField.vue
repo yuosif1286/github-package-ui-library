@@ -16,10 +16,6 @@ const elementId = computed(() => {
 
 const label = computed(() => useAttrs().label as string | undefined);
 
-// Log $slots to the console
-onMounted(() => {
-  console.log('Slots:', $slots);
-});
 </script>
 
 <template>
