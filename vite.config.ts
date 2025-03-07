@@ -1,41 +1,37 @@
 import path from 'path';
+import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import vuetify from 'vite-plugin-vuetify';
-
+import {resolve} from 'path'
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 export default defineConfig({
   plugins: [
-    vue(),
-    vuetify(), // Enable Vuetify plugin
+    vue({
+      template: { transformAssetUrls },
+    }),
+    vuetify({
+      autoImport: true,
+    }),
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'), // Use path.resolve for aliases
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "vuetify/lib/styles/main.sass";`, // Add Vuetify styles
-      },
-    },
+  optimizeDeps: {
+    include: ["vuetify"],
   },
   build: {
-    cssCodeSplit: true,
-    target: 'esnext',
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'), // Entry point for the library
-      name: 'GithubPackagesUiLibrary', // Global name for the library
-      fileName: (format) => `halal-ui-library.${format}.js`, // Output file name
+      // src/main.ts is where we have exported our component(s)
+      entry: resolve(__dirname, "src/main.ts"),
+      name: "GithubPackagesUiLibrary",
+      // the name of the output files when the build is run
+      fileName: "halal-ui-library",
     },
     rollupOptions: {
-      external: ['vue', 'vuetify'], // Externalize Vue and Vuetify
-      output: {
-        globals: {
-          vue: 'Vue',
-          vuetify: 'Vuetify',
-        },
-      },
-    },
+      // Make sure to exclude Vue from the bundle
+      external: ['vue']
+    }
   },
 });
