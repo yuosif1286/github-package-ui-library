@@ -31,7 +31,12 @@ export default defineConfig({
     },
     rollupOptions: {
       // Make sure to exclude Vue from the bundle
-      external: ['vue']
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+      },
     }
   },
 });
