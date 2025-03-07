@@ -1,16 +1,22 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import { createVuetify } from 'vuetify';
+import { App } from 'vue';
+import { createVuetify } from 'vuetify'; // Remove VuetifyPlugin
 import 'vuetify/styles'; // Import Vuetify styles
 import '@mdi/font/css/materialdesignicons.css'; // Import Material Design Icons
-import {BaseButton} from './index';
+import BaseButton from './components/BaseButton.vue'; // Import your component
+
 
 const vuetify = createVuetify();
-const myComponentLibrary= {
-    install:(app:any)=>{
-        app.component('MyButton',BaseButton)
-    }
-}
 
-export {vuetify,BaseButton as MyButton}
-// createApp(App).use(vuetify).mount('#app');
+// Define your library plugin
+const myComponentLibrary = {
+  install(app: App) {
+    app.use(vuetify); 
+    app.component('MyButton', BaseButton); 
+  },
+};
+
+// Export Vuetify instance and components
+export { vuetify, BaseButton as MyButton };
+
+// Export the library plugin as default
+export default myComponentLibrary;

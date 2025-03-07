@@ -14,6 +14,8 @@ const fontSize = computed(() => `${props.size}px`);
 </script>
 
 <template>
-  <VBtn color="primary">Test</VBtn>
+    <v-btn v-bind="props">
+    <slot>Click Me</slot>
+  </v-btn>
 </template>
 
