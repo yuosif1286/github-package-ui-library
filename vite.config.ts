@@ -25,9 +25,9 @@ export default defineConfig({
     lib: {
       // src/main.ts is where we have exported our component(s)
       entry: resolve(__dirname, "src/main.ts"),
-      name: "GithubPackagesUiLibrary",
+      name: "HalalUiLibrary",
       // the name of the output files when the build is run
-      fileName: "halal-ui-library",
+      fileName: (format) => `halal-ui-library.${format}.js`,
     },
     rollupOptions: {
       // Make sure to exclude Vue from the bundle
