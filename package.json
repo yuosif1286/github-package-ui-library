@@ -2,13 +2,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/halal-ui-library.js",
-  "module": "./dist/halal-ui-library.esm.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/halal-ui-library.umd.js", 
+  "module": "./dist/halal-ui-library.es.js",
+  "types": "./dist/types/index.d.ts", 
   "exports": {
     ".": {
-      "import": "./dist/halal-ui-library.esm.js",
-      "require": "./dist/halal-ui-library.js"
+       "import": "./dist/halal-ui-library.es.js",
+      "require": "./dist/halal-ui-library.umd.js"
     },
     "./dist/halal-ui-library.css": {
       "import": "./dist/halal-ui-library.css",
