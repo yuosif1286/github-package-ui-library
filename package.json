@@ -23,7 +23,7 @@
     "url": "https://github.com/yuosif1286/github-package-ui-library"
   },
   "name": "@yuosif1286/halal-ui-library",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "scripts": {
     "dev": "vite",
