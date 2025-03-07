@@ -9,6 +9,10 @@
     ".": {
       "import": "./dist/halal-ui-library.esm.js",
       "require": "./dist/halal-ui-library.js"
+    },
+    "./dist/halal-ui-library.css": {
+      "import": "./dist/halal-ui-library.css",
+      "require": "./dist/halal-ui-library.css"
     }
   },
   "publishConfig": {
