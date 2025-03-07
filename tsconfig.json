@@ -1,25 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "skipLibCheck": true,
-    "outDir": "dist",
-    "declaration": true,
-    "declarationDir": "dist/types",
-    "emitDeclarationOnly": true,
+    "outDir": "dist", // Output directory for compiled files
+    "declaration": true, // Generate .d.ts files
+    "declarationDir": "dist/types", // Output directory for .d.ts files
+    "rootDir": "src", // Root directory of your source files
+    "module": "ESNext", // Module system
+    "target": "ESNext", // Target JavaScript version
+    "moduleResolution": "node", // Module resolution strategy
+    "esModuleInterop": true, // Enable ES module interop
+    "skipLibCheck": true, // Skip library checks
+    "strict": true // Enable strict type-checking
   },
-  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"]
+  "include": ["src/**/*"], // Include all files in src
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist
 }
