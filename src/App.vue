@@ -1,6 +1,5 @@
 <script setup lang="ts">
  import { ref } from 'vue';
-import BaseButton from './components/BaseButton.vue';
 
  const test=ref('')
 </script>
@@ -8,7 +7,7 @@ import BaseButton from './components/BaseButton.vue';
 <template>
 <VRow class="p-xl-3">
     <VCol class="justify-center ma-12 pa-12">
-        <BaseButton></BaseButton>
+        <MyButton color='primary'></MyButton>
     </VCol>
 </VRow>
 <span>{{ test }}</span>

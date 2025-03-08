@@ -6,8 +6,6 @@ type BaseButtonProps = {
 };
 
 const props = withDefaults(defineProps<BaseButtonProps>(), {
-  size: 16,
-  color: "skyblue",
 });
 
 const fontSize = computed(() => `${props.size}px`);
