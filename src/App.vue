@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseButton from './components/BaseButton.vue'
  import { ref } from 'vue';
 
  const test=ref('this test word')
@@ -8,7 +9,7 @@
 <VRow class="p-xl-3">
     <VCol class="justify-center ma-12 pa-12">
     this is exported to library
-        <MyButton color='primary'></MyButton>
+        <BaseButton/>
     </VCol>
     <v-container class="fill-height">
     <v-responsive class="d-flex align-center text-center fill-height">

@@ -7,18 +7,14 @@ import App1 from './App.vue';
 
 
 
-// Define your library plugin
-const myComponentLibrary = {
-  install(app: App) {
-    app.use(vuetify); 
-    app.component('MyButton', BaseButton); 
-  },
-};
+// // Define your library plugin
+// const myComponentLibrary = {
+//   install(app: App) {
+//     app.use(vuetify); 
+//     app.component('MyButton', BaseButton); 
+//   },
+// };
 
-createApp(App1).use(vuetify).use(myComponentLibrary).mount('#app');
-// Export Vuetify instance and components
-export { vuetify, BaseButton as MyButton };
+createApp(App1).use(vuetify).mount('#app');
 
-// Export the library plugin as default
-export default myComponentLibrary;
 

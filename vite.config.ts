@@ -21,7 +21,7 @@ export default defineConfig({
     },},
   build: {
     lib: {
-      entry: './src/main.ts', // Entry point of your library
+      entry: './src/lib/main.ts', // Entry point of your library
       name: 'HalalUiLibrary',
       fileName: (format) => `halal-ui-library.${format}.js`,
     },
