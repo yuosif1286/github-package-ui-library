@@ -2,12 +2,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/halal-ui-library.umd.js", 
+  "main": "./dist/halal-ui-library.umd.js",
   "module": "./dist/halal-ui-library.es.js",
-  "types": "./dist/types/index.d.ts", 
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-       "import": "./dist/halal-ui-library.es.js",
+      "import": "./dist/halal-ui-library.es.js",
       "require": "./dist/halal-ui-library.umd.js"
     },
     "./dist/halal-ui-library.css": {
@@ -23,7 +23,7 @@
     "url": "https://github.com/yuosif1286/github-package-ui-library"
   },
   "name": "@yuosif1286/halal-ui-library",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "type": "module",
   "scripts": {
     "dev": "vite",
