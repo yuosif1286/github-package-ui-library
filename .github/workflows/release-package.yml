@@ -10,10 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm ci
+
+      # Install dependencies using npm install instead of npm ci
+      - name: Install dependencies
+        run: npm install
+
       - run: npm test
 
   publish-gpr:
@@ -24,11 +29,16 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
+
+      # Install dependencies using npm install instead of npm ci
+      - name: Install dependencies
+        run: npm install
+
       - run: npm run build
 
       # Set Git user and email for versioning and pushing changes
