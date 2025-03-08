@@ -1,0 +1,63 @@
+// src/styles/variables.scss
+
+// Override root variables
+$border-radius-root: 8px;
+$font-size-root: 18px;
+$body-font-family: 'Roboto', sans-serif;
+$heading-font-family: 'Roboto', sans-serif;
+$btn-text-transform: none;
+
+// Override Vuetify colors
+$primary: #92c589;
+$secondary: #03dac6;
+$accent: #ff4081;
+$error: #b00020;
+$info: #2196f3;
+$success: #4caf50;
+$warning: #fb8c00;
+
+// Override typography
+$typography: (
+  "h1": (
+    "size": 5rem, // Font size for h1
+    "weight": 300, // Font weight for h1
+    "line-height": 1, // Line height for h1
+    "letter-spacing": -0.015625em, // Letter spacing for h1
+    "font-family": $heading-font-family, // Font family for h1
+    "text-transform": none, // Text transform for h1
+  ),
+  "h2": (
+    "size": 2.5rem, // Font size for h2
+    "weight": 300, // Font weight for h2
+    "line-height": 1.5, // Line height for h2
+    "letter-spacing": -0.00833em, // Letter spacing for h2
+    "font-family": $heading-font-family, // Font family for h2
+    "text-transform": none, // Text transform for h2
+  ),
+  "h3": (
+    "size": 2rem, // Font size for h3
+    "weight": 400, // Font weight for h3
+    "line-height": 1.5, // Line height for h3
+    "letter-spacing": 0, // Letter spacing for h3
+    "font-family": $heading-font-family, // Font family for h3
+    "text-transform": none, // Text transform for h3
+  ),
+  // Add more headings as needed
+);
+
+// Override spacing
+$spacer: 16px;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// Custom background color for the body
+$bg-body: blue;
+@use 'vuetify' with (
+  $typography: $typography
+);
