@@ -2,7 +2,6 @@
 import BaseButton from './components/BaseButton.vue'
  import { ref } from 'vue';
 
- const test=ref('test')
  const test=ref('this test word')
 </script>
 
