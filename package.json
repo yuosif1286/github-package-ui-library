@@ -4,7 +4,7 @@
   ],
   "main": "./dist/halal-ui-library.umd.js",
   "module": "./dist/halal-ui-library.es.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/types/lib/main.d.ts",
   "exports": {
     ".": {
       "import": "./dist/halal-ui-library.es.js",
@@ -23,7 +23,7 @@
     "url": "https://github.com/yuosif1286/github-package-ui-library"
   },
   "name": "@yuosif1286/halal-ui-library",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
-    "sass": "^1.83.4",
+    "sass": "^1.85.1",
     "vite-plugin-vuetify": "^2.1.0",
     "vue": "^3.5.13",
     "vuetify": "^3.7.11",
@@ -47,6 +47,7 @@
     "@types/webfontloader": "^1.6.38",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
+    "sass-loader": "^16.0.5",
     "typescript": "~5.6.2",
     "vite": "^6.0.5",
     "vite-plugin-css-injected-by-js": "^3.5.2",

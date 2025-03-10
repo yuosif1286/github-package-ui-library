@@ -11,6 +11,6 @@
     "skipLibCheck": true, // Skip library checks
     "strict": true // Enable strict type-checking
   },
-  "include": ["src/**/*"], // Include all files in src
+  "include": ["src/**/*","src/components/*"], // Include all files in src
   "exclude": ["node_modules", "dist"] // Exclude node_modules and dist
 }
