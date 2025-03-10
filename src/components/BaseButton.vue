@@ -15,5 +15,6 @@ const fontSize = computed(() => `${props.size}px`);
     <v-btn v-bind="props">
     <slot>Click Me</slot>
   </v-btn>
+  <VDivider class="mt-2"/>
 </template>
 

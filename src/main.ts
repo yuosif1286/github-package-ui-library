@@ -19,7 +19,7 @@ const myComponentLibrary = {
   },
 };
 
-// createApp(App1).use(vuetify).use(myComponentLibrary).mount('#app');
+ //createApp(App1).use(vuetify).use(myComponentLibrary).mount('#app');
 // Export Vuetify instance and components
 export { vuetify, BaseButton as MyButton };
 
